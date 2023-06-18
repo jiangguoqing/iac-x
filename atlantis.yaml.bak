@@ -3,4 +3,3 @@ projects:
 - dir: ./
   autoplan:
     enabled: true
-
