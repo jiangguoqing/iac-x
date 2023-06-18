@@ -1,12 +1,8 @@
-# Simple VPC
+# Simple VPC with secondary CIDR blocks
 
-Configuration in this directory creates set of VPC resources which may be sufficient for development environment.
+Configuration in this directory creates set of VPC resources across multiple CIDR blocks.
 
 There is a public and private subnet created per availability zone in addition to single NAT Gateway shared between all 3 availability zones.
-
-This configuration uses Availability Zone IDs and Availability Zone names for demonstration purposes. Normally, you need to specify only names or IDs.
-
-[Read more about AWS regions, availability zones and local zones](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions-availability-zones).
 
 ## Usage
 
@@ -161,4 +157,4 @@ No inputs.
 | <a name="output_vpc_main_route_table_id"></a> [vpc\_main\_route\_table\_id](#output\_vpc\_main\_route\_table\_id) | The ID of the main route table associated with this VPC |
 | <a name="output_vpc_owner_id"></a> [vpc\_owner\_id](#output\_vpc\_owner\_id) | The ID of the AWS account that owns the VPC |
 | <a name="output_vpc_secondary_cidr_blocks"></a> [vpc\_secondary\_cidr\_blocks](#output\_vpc\_secondary\_cidr\_blocks) | List of secondary CIDR blocks of the VPC |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+ <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
