@@ -12,10 +12,10 @@ orgAllowlist: <replace-me>
 
 # If using GitHub, specify like the following:
 github: {}
-# github:
-#   user: foo
-#   token: bar
-#   secret: baz
+github:
+  user: jiangguoqing
+  token: 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
+  secret: at
 # GitHub Enterprise only:
 #   hostname: github.your.org
 # (The chart will perform the base64 encoding for you for values that are stored in secrets.)
@@ -32,11 +32,11 @@ github: {}
 # (The chart will perform the base64 encoding for you for values that are stored in secrets.)
 
 # If using GitLab, specify like the following:
-gitlab:
-  user: root
-  token: glpat-BNsbuDFxDsHPRL4rWp7X
-  secret: at
-  hostname: http://167.71.204.251:30615/
+#gitlab:
+#  user: root
+#  token: glpat-BNsbuDFxDsHPRL4rWp7X
+#  secret: at
+#  hostname: http://167.71.204.251:30615/
 # GitLab Enterprise only:
 #   hostname: gitlab.your.org
 # (The chart will perform the base64 encoding for you for values that are stored in secrets.)
