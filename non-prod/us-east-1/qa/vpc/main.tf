@@ -23,7 +23,7 @@ locals {
 ################################################################################
 
 module "vpc" {
-  source = "git::github.com:jiangguoqing/iac-x.git//vpc"
+  source = "git::git@github.com:jiangguoqing/iac-x.git//vpc?ref=main"
 
   name = local.name
   cidr = local.vpc_cidr
