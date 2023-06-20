@@ -1,5 +1,16 @@
+terraform {
+  backend "s3" {
+    encrypt        = false    
+    bucket         = "iac-x"
+    key            = "terraform.tfstate"
+    region         = "ap-southeast-1"
+    dynamodb_table = "iac-x"
+  }
+}
+
 provider "aws" {
   region = local.region
+  profile = "dev"
 }
 
 data "aws_availability_zones" "available" {}
