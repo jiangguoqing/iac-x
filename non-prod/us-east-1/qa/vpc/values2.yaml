@@ -7,14 +7,15 @@
 # atlantisUrl: http://10.0.0.0
 
 # Replace this with your own repo allowlist:
-orgAllowlist: github.com/jiangguoqing/* 
+orgAllowlist: <replace-me>
 # logLevel: "debug"
 
 # If using GitHub, specify like the following:
-github:
-  user: jiangguoqing 
-  token: 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 
-  secret: at
+github: {}
+# github:
+#   user: foo
+#   token: bar
+#   secret: baz
 # GitHub Enterprise only:
 #   hostname: github.your.org
 # (The chart will perform the base64 encoding for you for values that are stored in secrets.)
@@ -92,43 +93,17 @@ github:
 # netrcSecretName: 'mynetrcsecret'
 
 # To specify AWS credentials to be mapped to ~/.aws or to aws.directory:
-#aws: {
-#  credentials: |
-#  [devjgq]
-#  aws_access_key_id = AKIAVKMROZ4GJZOQ2BKU
-#  aws_secret_access_key = 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
-# [at2]
-#  source_profile = devjgq
-#  role_arn = arn:aws:iam::566420885017:role/atlantis
-#
-#  config: |
-#    [profile at]
-#    role_arn = arn:aws:iam::566420885017:role/atlantis
-#    source_profile = at2 
-#}
-#  directory: "/home/atlantis/.aws"
-
-
-     
-# To reference an already existing Secret object with AWS credentials
-# awsSecretName: 'mysecretwithawscreds'
-
-aws: 
-  credentials: |
-    [devjgq]
-    aws_access_key_id=AKIAVKMROZ4GJZOQ2BKU
-    aws_secret_access_key=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
-
-    [dev]
-    aws_access_key_id=AKIAYHYKQZYMZ3XVAUIZ
-    aws_secret_access_key=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
-
-  #config: |
-    #[profile at]
-    #role_arn = arn:aws:iam::566420885017:role/atlantis
-    #source_profile = devjgq
-
-  directory: "/home/atlantis/.aws"
+aws: {}
+#   credentials: |
+#     [default]
+#     aws_access_key_id=YOUR_ACCESS_KEY_ID
+#     aws_secret_access_key=YOUR_SECRET_ACCESS_KEY
+#     region=us-east-1
+#   config: |
+#     [profile a_role_to_assume]
+#     role_arn = arn:aws:iam::123456789:role/service-role/roleToAssume
+#     source_profile = default
+#   directory: "/home/atlantis/.aws"
 # To reference an already existing Secret object with AWS credentials
 # awsSecretName: 'mysecretwithawscreds'
 
@@ -334,6 +309,13 @@ webhook_ingress:
 # You have to create a secret `my-ca-certificates`
 # customPem: my-ca-certificates
 
+resources:
+  requests:
+    memory: 1Gi
+    cpu: 100m
+  limits:
+    memory: 1Gi
+    cpu: 100m
 
 ## Embedded data volume & volumeMount (default working)
 volumeClaim:

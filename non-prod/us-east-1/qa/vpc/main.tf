@@ -10,7 +10,7 @@ terraform {
 
 provider "aws" {
   region = local.region
-  profile = "at"
+  profile = "dev"
 }
 
 data "aws_availability_zones" "available" {}
